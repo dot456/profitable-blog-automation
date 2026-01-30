@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: 개발 블로그 초기 설정 및 첫 글 작성\n\n- Astro 기반 블로그 프로젝트 구성\n- 흑백 미니멀 테마로 스타일 변경\n- Home, About 페이지 개발 블로그 컨셉으로 수정\n- 블로그 자동화 규칙 문서\\(claude.md\\) 작성\n- 첫 번째 글: React Custom Hooks 7가지 패턴\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git branch:*)",
+      "Bash(git push:*)"
+    ]
+  }
+}
