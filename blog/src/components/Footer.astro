@@ -2,6 +2,14 @@
 const today = new Date();
 ---
 
+<!-- Coupang Partners -->
+<div class="coupang-ad">
+	<script src="https://ads-partners.coupang.com/g.js"></script>
+	<script>
+		new PartnersCoupang.G({"id":961821,"template":"carousel","trackingCode":"AF1708558","width":"680","height":"140","tsource":""});
+	</script>
+</div>
+
 <footer>
 	&copy; {today.getFullYear()} Dev Blog. All rights reserved.
 	<div class="social-links">
@@ -16,6 +24,12 @@ const today = new Date();
 	</div>
 </footer>
 <style>
+	.coupang-ad {
+		max-width: 720px;
+		margin: 0 auto;
+		padding: 2em 1em;
+		text-align: center;
+	}
 	footer {
 		padding: 2em 1em 6em 1em;
 		background: linear-gradient(var(--gray-gradient)) no-repeat;
