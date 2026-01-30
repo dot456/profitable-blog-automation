@@ -1,0 +1,121 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+---
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead title="About | Dev Blog" description="Dev Blog 소개 - 실무에서 바로 쓸 수 있는 개발 지식을 공유하는 기술 블로그입니다." />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<article>
+				<h1>About This Blog</h1>
+
+				<section>
+					<h2>Blog</h2>
+					<p>
+						Dev Blog는 개발자들을 위한 실용적인 기술 블로그입니다.
+						복잡한 개념을 쉽게 풀어서 설명하고, 실제 프로젝트에서
+						바로 활용할 수 있는 코드와 노하우를 공유합니다.
+					</p>
+					<p>
+						프론트엔드부터 백엔드, DevOps까지 다양한 개발 분야를 다루며,
+						특히 실무에서 자주 마주치는 문제들의 해결 방법에 집중하고 있어요.
+					</p>
+				</section>
+
+				<section>
+					<h2>Topics</h2>
+					<ul>
+						<li><strong>Frontend</strong> - React, Vue, TypeScript, Next.js, 상태 관리, 성능 최적화</li>
+						<li><strong>Backend</strong> - Node.js, Python, Java, API 설계, 아키텍처</li>
+						<li><strong>DevOps</strong> - Docker, Kubernetes, CI/CD, 클라우드</li>
+						<li><strong>Database</strong> - SQL, NoSQL, ORM, 쿼리 최적화</li>
+						<li><strong>Career</strong> - 개발자 커리어, 면접 준비, 성장 팁</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Goal</h2>
+					<p>
+						이 블로그의 목표는 단순합니다. 제가 개발하면서 배운 것들을
+						다른 개발자들과 나누는 것이에요.
+					</p>
+					<p>
+						어려운 문제를 해결했을 때의 희열, 새로운 기술을 익혔을 때의 설렘을
+						함께 나누고 싶습니다. 이 블로그가 여러분의 개발 여정에
+						조금이나마 도움이 되길 바랍니다.
+					</p>
+				</section>
+
+				<section>
+					<h2>Contact</h2>
+					<p>
+						글에 대한 피드백이나 다뤘으면 하는 주제가 있다면
+						언제든 댓글로 남겨주세요. 함께 성장하는 개발자 커뮤니티를
+						만들어가고 싶습니다.
+					</p>
+				</section>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		max-width: 720px;
+		margin: 0 auto;
+		padding: 2em 1em;
+	}
+
+	article {
+		padding: 2em 0;
+	}
+
+	h1 {
+		font-size: 2.5em;
+		margin-bottom: 1.5em;
+		padding-bottom: 0.5em;
+		border-bottom: 3px solid rgb(var(--black));
+	}
+
+	section {
+		margin-bottom: 2.5em;
+	}
+
+	h2 {
+		font-size: 1.4em;
+		margin-bottom: 1em;
+		color: rgb(var(--black));
+	}
+
+	p {
+		line-height: 1.8;
+		color: rgb(var(--gray-dark));
+		margin-bottom: 1em;
+	}
+
+	ul {
+		padding-left: 1.5em;
+		line-height: 2;
+	}
+
+	li {
+		color: rgb(var(--gray-dark));
+	}
+
+	li strong {
+		color: rgb(var(--black));
+	}
+
+	@media (max-width: 720px) {
+		h1 {
+			font-size: 2em;
+		}
+	}
+</style>

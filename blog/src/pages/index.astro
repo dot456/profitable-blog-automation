@@ -1,0 +1,165 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="ko">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="hero">
+				<h1>Dev Blog</h1>
+				<p class="tagline">
+					실무에서 바로 쓸 수 있는 개발 지식을 공유합니다
+				</p>
+			</section>
+
+			<section class="intro">
+				<h2>Welcome</h2>
+				<p>
+					안녕하세요! 이 블로그는 프론트엔드, 백엔드, DevOps 등
+					다양한 개발 분야의 실용적인 지식을 다루는 기술 블로그입니다.
+				</p>
+				<p>
+					복잡한 개념도 쉽게 풀어서 설명하고, 실제 프로젝트에서
+					바로 활용할 수 있는 코드와 팁을 공유하고 있어요.
+				</p>
+			</section>
+
+			<section class="topics">
+				<h2>Topics</h2>
+				<ul class="topic-list">
+					<li>
+						<span class="topic-icon">Frontend</span>
+						<span>React, Vue, TypeScript, Next.js</span>
+					</li>
+					<li>
+						<span class="topic-icon">Backend</span>
+						<span>Node.js, Python, Java, Go</span>
+					</li>
+					<li>
+						<span class="topic-icon">DevOps</span>
+						<span>Docker, Kubernetes, CI/CD</span>
+					</li>
+					<li>
+						<span class="topic-icon">Database</span>
+						<span>SQL, NoSQL, ORM</span>
+					</li>
+				</ul>
+			</section>
+
+			<section class="cta">
+				<a href="/blog" class="cta-button">Blog</a>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		max-width: 720px;
+		margin: 0 auto;
+		padding: 2em 1em;
+	}
+
+	.hero {
+		text-align: center;
+		padding: 3em 0;
+		border-bottom: 1px solid rgb(var(--gray-light));
+		margin-bottom: 2em;
+	}
+
+	.hero h1 {
+		font-size: 3em;
+		margin-bottom: 0.3em;
+		letter-spacing: -0.02em;
+	}
+
+	.tagline {
+		font-size: 1.2em;
+		color: rgb(var(--gray));
+		margin: 0;
+	}
+
+	section {
+		margin-bottom: 2.5em;
+	}
+
+	h2 {
+		font-size: 1.5em;
+		margin-bottom: 1em;
+		padding-bottom: 0.3em;
+		border-bottom: 2px solid rgb(var(--black));
+	}
+
+	p {
+		line-height: 1.8;
+		color: rgb(var(--gray-dark));
+	}
+
+	.topic-list {
+		list-style: none;
+		padding: 0;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1em;
+	}
+
+	.topic-list li {
+		display: flex;
+		align-items: center;
+		gap: 1em;
+		padding: 1em;
+		background: rgb(var(--gray-light));
+		border-radius: 8px;
+	}
+
+	.topic-icon {
+		font-weight: 700;
+		font-size: 0.85em;
+		padding: 0.3em 0.8em;
+		background: rgb(var(--black));
+		color: white;
+		border-radius: 4px;
+		min-width: 80px;
+		text-align: center;
+	}
+
+	.cta {
+		text-align: center;
+		padding: 2em 0;
+	}
+
+	.cta-button {
+		display: inline-block;
+		padding: 1em 3em;
+		background: rgb(var(--black));
+		color: white;
+		text-decoration: none;
+		border-radius: 8px;
+		font-weight: 600;
+		transition: opacity 0.2s;
+	}
+
+	.cta-button:hover {
+		opacity: 0.8;
+		color: white;
+	}
+
+	@media (max-width: 720px) {
+		.hero h1 {
+			font-size: 2.2em;
+		}
+
+		.tagline {
+			font-size: 1em;
+		}
+	}
+</style>
